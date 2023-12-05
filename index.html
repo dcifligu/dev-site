@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/svg+xml" href="assets/Images/Logo-white.svg" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Deivd Cifligu</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/index-TRJX78Po.css">
+  <script src="assets/main.min.js" defer></script>
+</head>
+
+<body onload="loaderFunction()">
+
+  <div id="loader-container"
+    class="h-screen fixed w-screen flex justify-center items-center z-50 bg-white !overflow-hidden">
+    <div class="loader scale-150">
+      <svg viewBox="0 0 80 80">
+        <circle id="test" cx="40" cy="40" r="32"></circle>
+      </svg>
+    </div>
+
+    <div class="loader triangle scale-150">
+      <svg viewBox="0 0 86 80">
+        <polygon points="43 8 79 72 7 72"></polygon>
+      </svg>
+    </div>
+
+    <div class="loader scale-150">
+      <svg viewBox="0 0 80 80">
+        <rect x="8" y="8" width="64" height="64"></rect>
+      </svg>
+    </div>
+  </div>
+
+
+  <div class="fixed w-screen h-screen bg-transparent z-30 grid grid-cols-4 hidden" id="menu">
+    <div class="h-screen w-full col-span-1 bg-sky-600 hidden flex items-center" id="left-panel">
+      <div class="h-3/4 w-[90%] mx-auto">
+        <ul class="">
+          <li>
+            <button onclick="about_menu()"
+              class="my-3 w-fit font-thin focus:font-semibold text-6xl focus:first-letter:italic text-white focus:border-b-4 duration-75 transition-all focus:border-[#d1c1fc] left-panel-button">
+              About
+            </button>
+          </li>
+          <li>
+            <button onclick="contact_menu()"
+              class="my-3 w-fit font-thin focus:font-semibold text-6xl focus:first-letter:italic text-white focus:border-b-4 duration-75 transition-all focus:border-[#d1c1fc] left-panel-button">
+              Contact
+            </button>
+          </li>
+          <li>
+            <button onclick="fees_menu()"
+              class="my-3 w-fit font-thin focus:font-semibold text-6xl focus:first-letter:italic text-white focus:border-b-4 duration-75 transition-all focus:border-[#d1c1fc] left-panel-button">
+              Pricing
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="h-screen w-full col-span-3 bg-sky-300 hidden justify-center" id="right-panel">
+      <div class="w-[75%] h-3/4 flex items-center justify-center mx-auto" id="default-menu">
+        <h1
+          class="font-extrabold leading-10 tracking-tight text-white text-center sm:leading-none md:text-6xl sm:text-4xl lg:text-7xl">
+          <span class="inline md:block">Create your</span>
+          <span
+            class="bg-clip-text text-transparent bg-gradient-to-r from-[#292929] via-[#564e6d] to-[#6d52b3] md:inline-block h-fit py-4">Next
+            Project</span>
+
+        </h1>
+      </div>
+      <div class="w-[75%] h-3/4 hidden flex items-center justify-center mx-auto" id="about-menu">
+        <span class="flex text-xl text-white font-semibold sm:w-fit italic">Hello! I'm Deivid, a seasoned
+          developer with years of proven experience in the industry. My expertise spans a wide
+          spectrum, ranging from crafting dynamic web applications to shaping seamless and intuitive UI/UX designs.
+          As
+          a
+          passionate professional dedicated to pushing the boundaries of innovation, I thrive on transforming ideas
+          into impactful
+          digital experiences. Explore the website to witness the fusion of technical prowess and creative flair
+          that
+          defines my
+          journey in the world of development and design. Welcome to my digital space, where technology meets
+          artistry!</span>
+      </div>
+      <div class="w-[75%] h-3/4 hidden flex items-center justify-center mx-auto" id="contact-menu">
+        <div class="container px-6 pt-12 mx-auto">
+
+          <img class="object-cover w-full h-64 mt-10 rounded-lg lg:h-96" src="pexels-luis-quintero-2148222.jpg" alt="">
+
+          <div class="grid grid-cols-1 gap-12 mt-10 lg:grid-cols-2 sm:grid-cols-2 ">
+            <div class="p-4 rounded-lg bg-blue-50 md:p-6 ">
+              <span class="inline-block p-3 text-blue-500 rounded-lg bg-blue-100/80 ">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-5 h-5">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                </svg>
+              </span>
+
+              <h2 class="mt-4 text-base font-medium text-gray-800 ">Send a request</h2>
+              <p class="mt-2 text-sm text-gray-500 ">I am always happy to help out</p>
+              <a href="mailto:deivi.cifligu@gmail.com"
+                class="mt-4 text-md text-blue-500 underline">deivi.cifligu@gmail.com</a>
+            </div>
+
+            <div class="p-4 rounded-lg bg-blue-50 md:p-6 ">
+              <span class="inline-block p-3 text-blue-500 rounded-lg bg-blue-100/80 ">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-5 h-5">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+              </span>
+
+              <h2 class="mt-4 text-base font-medium text-gray-800 ">Check out other profiles</h2>
+              <p class="mt-2 text-sm text-gray-500 ">Feel free to browse my previous experineces</p>
+              <a href="https://linkedin.com/in/deivid-cifligu-610b91212" class="mt-4 text-md text-blue-500 underline">On
+                Linkedin</a>
+              <a href="https://www.upwork.com/freelancers/~01ca9033e352d552d9"
+                class="mt-4 text-md text-blue-500 underline">On
+                Upwork</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-[75%] h-3/4 hidden mx-auto mt-12" id="fees-menu">
+        <div class="max-w-md mx-auto mb-14 text-center">
+          <h1 class="text-4xl font-semibold text-[#2e2f30] mb-6 lg:text-5xl"><span
+              class="text-purple-400">Flexible</span> Plans</h1>
+          <p class="text-xl text-white font-medium">Choose a plan that works best for you and your team.</p>
+          <p class="text-md text-white font-medium">*Pricing may differ based on requests*</p>
+        </div>
+
+        <div class="flex flex-col justify-between items-center lg:flex-row lg:items-start">
+          <div
+            class="w-full flex-1 mt-8 p-8 order-2 bg-white shadow-xl rounded-3xl sm:w-96 lg:w-full lg:order-1 lg:rounded-r-none">
+            <div class="mb-7 pb-7 flex items-center border-b border-gray-300">
+              <img src="https://res.cloudinary.com/williamsondesign/abstract-1.jpg" alt=""
+                class="rounded-3xl w-20 h-20" />
+              <div class="ml-5">
+                <span class="block text-2xl font-semibold">Static / Landing Page</span>
+                <span><span class="font-medium text-gray-500 text-xl align-top">€&thinsp;</span><span
+                    class="text-3xl font-bold">500</span></span><span class="text-gray-500 font-medium"> Starting
+                  price</span>
+              </div>
+            </div>
+            <ul class="mb-7 font-medium text-gray-500">
+              <li class="flex text-lg mb-2">
+                <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
+                <span class="ml-3"><span class="text-[#2e2f30]">Responsive </span>Page Design</span>
+              </li>
+              <li class="flex text-lg mb-2">
+                <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
+                <span class="ml-3">Development & Deployment</span>
+              </li>
+            </ul>
+            <a href="#/"
+              class="flex justify-center items-center bg-sky-400 rounded-xl py-5 px-4 text-center text-white text-xl">
+              Choose Plan
+              <img src="https://res.cloudinary.com/williamsondesign/arrow-right.svg" class="ml-2" />
+            </a>
+          </div>
+
+          <div
+            class="w-full flex-1 p-8 order-1 shadow-xl rounded-3xl bg-gray-900 text-gray-400 sm:w-96 lg:w-full lg:order-2 lg:mt-0">
+            <div class="mb-8 pb-8 flex items-center border-b border-gray-600">
+              <img src="https://res.cloudinary.com/williamsondesign/abstract-2.jpg" alt=""
+                class="rounded-3xl w-20 h-20" />
+              <div class="ml-5">
+                <span class="block text-3xl font-semibold text-white">E-Commerce</span>
+                <span><span class="font-medium text-xl align-top">€&thinsp;</span><span
+                    class="text-3xl font-bold text-white">5000
+                  </span></span><span class="font-medium">Staring Price</span>
+              </div>
+            </div>
+            <ul class="mb-10 font-medium text-xl">
+              <li class="flex text-lg mb-2">
+                <img src="https://res.cloudinary.com/williamsondesign/check-white.svg" />
+                <span class="ml-3"><span class="text-white">Responsive </span>Page Design</span>
+              </li>
+              <li class="flex text-lg mb-2">
+                <img src="https://res.cloudinary.com/williamsondesign/check-white.svg" />
+                <span class="ml-3"><span class="text-white">Online Purchase </span>Methods</span>
+              </li>
+              <li class="flex text-lg mb-2">
+                <img src="https://res.cloudinary.com/williamsondesign/check-white.svg" />
+                <span class="ml-3"><span class="text-white">Development & Deployment </span>
+              </li>
+              <li class="flex text-lg mb-2">
+                <img src="https://res.cloudinary.com/williamsondesign/check-white.svg" />
+                <span class="ml-3"><span class="text-white">1 month free </span>Maintainence</span>
+              </li>
+
+            </ul>
+            <a href="#/"
+              class="flex justify-center items-center bg-sky-400 rounded-xl py-6 px-4 text-center text-white text-2xl">
+              Choose Plan
+              <img src="https://res.cloudinary.com/williamsondesign/arrow-right.svg" class="ml-2" />
+            </a>
+          </div>
+
+          <div
+            class="w-full flex-1 mt-8 p-8 order-3 bg-white shadow-xl rounded-3xl sm:w-96 lg:w-full lg:order-3 lg:rounded-l-none">
+            <div class="mb-7 pb-7 flex items-center border-b border-gray-300">
+              <img src="https://res.cloudinary.com/williamsondesign/abstract-3.jpg" alt=""
+                class="rounded-3xl w-20 h-20" />
+              <div class="ml-5">
+                <span class="block text-2xl font-semibold">Web Application</span>
+                <span><span class="font-medium text-gray-500 text-xl align-top">€&thinsp;</span><span
+                    class="text-3xl font-bold">3000</span></span><span class="text-gray-500 font-medium"> Starting
+                  Price</span>
+              </div>
+            </div>
+            <ul class="mb-7 font-medium text-gray-500">
+              <li class="flex text-lg mb-2">
+                <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
+                <span class="ml-3"><span class="text-[#2e2f30]">Responsive </span>Page Design</span>
+              </li>
+              <li class="flex text-lg mb-2">
+                <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
+                <span class="ml-3">Development & Deployment</span>
+              </li>
+              <li class="flex text-lg mb-2">
+                <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
+                <span class="ml-3"><span class="text-[#2e2f30]">Database Structure</span></span>
+              </li>
+            </ul>
+            <a href="#/"
+              class="flex justify-center items-center bg-sky-400 rounded-xl py-5 px-4 text-center text-white text-xl">
+              Choose Plan
+              <img src="https://res.cloudinary.com/williamsondesign/arrow-right.svg" class="ml-2" />
+            </a>
+          </div>
+        </div>
+        <p class="text-md text-white font-medium w-fit mx-auto mt-10">*If a request is not listed in the plans below
+          feel free to contact
+          via the
+          contact details*</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div id="site"> -->
+  <section class="w-screen h-screen" id="hero">
+    <div class="w-full h-full">
+      <div class="fixed right-0 flex flex-row z-30 items-center gap-1">
+        <div
+          class="w-fit h-fit p-3 my-8 bg-[#fff] rounded-full font-semibold tracking-wide text-[#2e2f30] duration-300 hover:bg-[#4541f1] hover:text-white origin-left hover:shadow-lg hover:shadow-[#28268a] cursor-pointer"
+          id="client-button">
+          <a class="mx-3 first-letter:text-3xl" href="mailto:deivi.cifligu@gmail.com">+ Become a client</a>
+        </div>
+        <button class="relative group mr-8 z-40">
+          <div
+            class="relative lg:flex overflow-hidden items-center justify-center rounded-full w-[40px] h-[40px] transform transition-all bg-slate-700 opacity-60 ring-0 ring-gray-300 hover:ring-8 group-focus:ring-4 ring-opacity-30 duration-200 shadow-md hover:opacity-100 sm: hidden"
+            onclick="toggle_menu()">
+            <div
+              class="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden">
+              <div class="bg-white h-[2px] w-7 transform transition-all duration-300 origin-left">
+              </div>
+              <div class="bg-white h-[2px] w-3 rounded transform transition-all duration-300">
+              </div>
+              <div class="bg-white h-[2px] w-4 transform transition-all duration-300 origin-left">
+              </div>
+
+              <div
+                class="absolute items-center justify-between transform transition-all duration-500 top-2.5 -translate-x-10 flex w-0 ">
+                <div
+                  class="absolute bg-white h-[2px] w-5 transform transition-all duration-500 rotate-0 delay-300 group-focus:rotate-45">
+                </div>
+                <div
+                  class="absolute bg-white h-[2px] w-5 transform transition-all duration-500 -rotate-0 delay-300 group-focus:-rotate-45">
+                </div>
+              </div>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div
+        class="absolute bg-gradient-to-tr from-[#d1c1fc] via-[#d3cce6] to-[#e6e4eb] m-3 rounded-3xl w-fill h-fill z-0">
+        <header class="mx-4 my-5 grid grid-cols-3 gap-8 w-fill">
+          <img src="assets/Images/Logo-white.svg" alt="logo" class="w-20 mx-5">
+          <div class="lg:col-span-2">
+            <div class="w-fit h-fit p-3 mx-6 bg-[#fff] rounded-full sm:hidden md:hidden lg:block xl:block">
+              <div class="mx-10 flex justify-start flex-row gap-4">
+                <span class="font-semibold tracking-wide text-[#2e2f30] mx-3 cursor-pointer"
+                  onclick="about_scroll()">About Me</span>
+                <span class="font-semibold tracking-wide text-[#2e2f30] mx-3 cursor-pointer"
+                  onclick="contact_scroll()">Contact</span>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div
+          class="mx-4 grid lg:grid-cols-2 xl:grid-cols-2 sm:grid-rows-2 md:grid-rows-2 w-fill h-full lg:mt-64 xl:mt-80">
+          <div class="flex flex-col gap-1 upper">
+            <span class="font-bold tracking-wide text-[#fff] mx-3 xl:text-8xl text-7xl">Looking for</span>
+            <div class="flex items-center border-white border-b-2 py-2">
+              <button
+                class="group xl:h-32 xl:w-32 flex justify-center align-middle  transition-all items-center lg:h-16 lg:w-16">
+                <div
+                  class="absolute xl:h-32 xl:w-32 group-hover:animate-ping group-hover:bg-transparent bg-[#fff] rounded-full group-hover:border-[#fff] border-white border-2 group-hover:animate-once group-hover:animate-ease-in-out lg:h-16 lg:w-16 z-10">
+                </div>
+                <span
+                  class="xl:text-5xl text-[#2e2f30] font-bold tracking-wide group-hover:animate-fade-down group-hover:animate-once group-hover:animate-ease-in-out lg:text-3xl z-20">
+                  ⭣
+                </span>
+              </button>
+              <span class="font-bold tracking-wide text-[#fff] mx-3 xl:text-8xl italic lg:text-7xl"> A
+              </span>
+              <span class="font-bold tracking-wide text-[#fff] mx-3 xl:text-8xl lg:text-7xl">Developer</span>
+            </div>
+            <div
+              class="w-fit h-fit p-3 bg-[#fff] rounded-full z-10 font-semibold tracking-wide text-[#2e2f30] text-3xl transition-all hover:bg-transparent hover:text-white origin-left hover:border-[#fff] cursor-pointer  border-white border-2 lg:text-2xl">
+              <a class="mx-3" href="mailto:deivi.cifligu@gmail.com">+ Become a client</a>
+            </div>
+          </div>
+          <div class="bg-center bg-no-repeat bg-contain flex justify-center sm:hidden md:block"
+            style="background-image: url('assets/Images/blob.png');">
+            <img src="" class="h-full ">
+            <div class="flex flex-col gap-1 upper">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="absolute bg-gradient-to-tr from-[#d1c1fc] via-[#d3cce6] to-[#e6e4eb] m-3 rounded-3xl w-fill h-fill z-0 sm:block md:block lg:hidden xl:hidden">
+        <img src="assets/Images/Logo-white.svg" alt="logo" class="w-20 mx-9 my-5">
+        <div class="sm:mt-40 md:mt-52">
+          <span class="font-bold tracking-wide text-[#fff] mx-3 sm:text-4xl md:text-6xl">Looking for</span>
+          <br>
+          <span class="font-bold tracking-wide text-[#fff] mx-3 sm:text-4xl italic md:text-6xl">A</span>
+          <span class="font-bold tracking-wide text-[#fff] sm:text-4xl md:text-6xl">Developer</span>
+          <button
+            class="group bg-[#fff] rounded-[100%] flex justify-center align-middle hover:bg-transparent mx-3 transition-all items-center w-24 h-24 sm:h-16 sm:w-16">
+            <div
+              class="absolute group-hover:animate-ping rounded-full group-hover:border-[#fff] border-white border-2 group-hover:animate-once group-hover:animate-ease-in-out w-24 h-24 sm:h-16 sm:w-16">
+            </div>
+            <span
+              class="text-[#2e2f30] font-bold tracking-wide group-hover:animate-fade-down group-hover:animate-once group-hover:animate-ease-in-out text-3xl">
+              ⭣
+            </span>
+          </button>
+          <div
+            class="w-fit h-fit p-3 my-4 flex justify-center bg-[#fff] rounded-full z-10 font-semibold tracking-wide text-[#2e2f30] transition-all hover:bg-transparent hover:text-white origin-left hover:border-[#fff] cursor-pointer mx-3 border-white border-2 text-2xl">
+            <span class="mx-3">+ Become a client</span>
+          </div>
+          <div class="bg-center bg-no-repeat bg-contain flex justify-center h-80"
+            style="background-image: url('assets/Images/blob.png');">
+          </div>
+        </div>
+      </div>
+  </section>
+  <div class="w-screen">
+    <div class="w-full flex flex-col items-center justify-center relative pb-3">
+      <span
+        class="font-bold tracking-wide mx-3 text-transparent text-8xl relative bg-clip-text bg-gradient-to-tr from-[#d1c1fc] via-[#d3cce6] to-[#e6e4eb] move-text-animation lowercase">Designer•Developer•Creator•Designer•Developer•Creator•Designer•Developer•Creator•Designer•Developer•Creator•Designer•Developer•Creator•Designer•Developer•Creator•Designer•Developer•Creator•Designer•Developer•Creator•Designer•Developer•Creator•Designer•Developer•Creator•Designer•Developer•Creator•Designer•Developer•Creator•Designer•Developer•Creator•Designer•Developer•Creator•Designer•Developer•Creator•Designer•Developer•Creator•Designer•Developer•Creator•Designer•Developer•Creator•Designer•Developer•Creator•Designer•Developer•Creator</span>
+    </div>
+  </div>
+  <section class="w-screen">
+    <div class="m-3 rounded-3xl w-fill z-0 grid grid-rows-2 lg:gap-8 gap-3" id="about">
+      <div class="h-fit lg:ml-32 my-2">
+        <h1 class="w-fit font-bold text-6xl first-letter:italic text-[#2e2f30] md:my-3 border-b-4 border-[#d1c1fc] ">
+          About me</h1>
+        <span class="flex md:w-1/2 text-xl text-gray-500 font-semibold sm:w-fit">Hello! I'm Deivid, a seasoned
+          developer with years of proven experience in the industry. My expertise spans a wide
+          spectrum, ranging from crafting dynamic web applications to shaping seamless and intuitive UI/UX designs.
+          As
+          a
+          passionate professional dedicated to pushing the boundaries of innovation, I thrive on transforming ideas
+          into impactful
+          digital experiences. Explore the website to witness the fusion of technical prowess and creative flair
+          that
+          defines my
+          journey in the world of development and design. Welcome to my digital space, where technology meets
+          artistry!</span>
+      </div>
+      <div class="h-fit lg:mr-32 my-2 flex justify-end flex-col items-end">
+        <h1 class="w-fit font-bold text-6xl first-letter:italic text-[#2e2f30] md:my-3 border-b-4 border-[#d1c1fc] ">
+          Services</h1>
+        <span class="flex md:w-1/2 text-xl text-gray-500 font-semibold sm:w-fit text-end"> I bring a wealth of
+          experience in
+          web development and UI/UX design, offering a diverse range of professional services
+          tailored to elevate your digital presence. From architecting robust web applications that seamlessly
+          integrate
+          functionality to crafting visually stunning and user-centric interfaces, I am committed to delivering
+          solutions that not
+          only meet but exceed your expectations. Whether you're seeking top-notch development expertise or a keen
+          eye
+          for design,
+          I am here to transform your ideas into reality. Explore the array of services I offer and let's embark on
+          a
+          journey to
+          enhance your online presence together.</span>
+      </div>
+    </div>
+    <div class="flex gap-3 w-[90%] mx-auto justify-center mt-10 m-3 md:flex-col lg:flex-row xl:flex-row sm:flex-col ">
+      <div class="group wrapper antialiased text-gray-900 w-1/3 sm:w-full">
+        <div>
+          <img src="assets/Images/web-design.jpg" alt="random image"
+            class="object-cover object-center group-hover:scale-110 duration-500 rounded-lg shadow-md w-full h-full">
+          <div class="relative px-4 -mt-16">
+            <div class="bg-[#F0F0F0] p-6 rounded-lg shadow-lg">
+              <div class="flex items-baseline">
+                <span
+                  class="bg-purple-300 text-purple-800 text-xs px-2 inline-block rounded-full uppercase font-semibold tracking-wide">
+                  Web
+                </span>
+              </div>
+              <h4 class="mt-1 text-xl font-semibold uppercase leading-tight truncate">Web Development</h4>
+              <div class="mt-1">
+                <span class="text-gray-600 text-sm">Empower your business with custom web app development service.
+                  Craft dynamic and interactive web applications
+                  tailored to meet your unique needs. From intuitive user interfaces to seamless data management,
+                  our
+                  solutions are
+                  designed to enhance user experiences and drive business growth in the digital landscape.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="group wrapper antialiased text-gray-900 w-1/3 sm:w-full">
+        <div>
+          <img src="assets/Images/pexels-jakub-zerdzicki-18686859.jpg" alt="random img"
+            class="object-cover object-center group-hover:scale-110 duration-500 rounded-lg shadow-md w-full h-full">
+          <div class="relative px-4 -mt-16">
+            <div class="bg-[#F0F0F0] p-6 rounded-lg shadow-lg">
+              <div class="flex items-baseline">
+                <span
+                  class="bg-purple-300 text-purple-800 text-xs px-2 inline-block rounded-full uppercase font-semibold tracking-wide">
+                  Interface
+                </span>
+              </div>
+              <h4 class="mt-1 text-xl font-semibold uppercase leading-tight truncate">UI/UX</h4>
+              <div class="mt-1">
+                <span class="text-gray-600 text-sm">Embark on a design journey tailored just for you. As a solo
+                  designer, I bring a personal touch to every project. Elevate
+                  your digital presence with my UI/UX design service, where thoughtful user interfaces meet seamless
+                  user experiences.
+                  From pixel-perfect designs to intuitive user flows, I prioritize the individual needs of your
+                  audience, ensuring that
+                  your digital footprint leaves a lasting impression. Let's collaborate to turn your vision into a
+                  visually captivating
+                  and user-centric reality.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="group wrapper antialiased text-gray-900 w-1/3 sm:w-full">
+        <div>
+          <img src="assets/Images/adobe.jpg" alt="random imgee"
+            class="object-cover object-center group-hover:scale-110 duration-500 rounded-lg shadow-md w-full h-full">
+          <div class="relative px-4 -mt-16">
+            <div class="bg-[#F0F0F0] p-6 rounded-lg shadow-lg">
+              <div class="flex items-baseline">
+                <span
+                  class="bg-purple-300 text-purple-800 text-xs px-2 inline-block rounded-full uppercase font-semibold tracking-wide">
+                  Graphical
+                </span>
+              </div>
+              <h4 class="mt-1 text-xl font-semibold uppercase leading-tight truncate">Design</h4>
+              <div class="mt-1">
+                <span class="text-gray-600 text-sm">Unlock the power of visual storytelling with my personalized
+                  graphic design service. As a solo designer, I bring a
+                  unique blend of creativity and precision to every project. From captivating brand visuals to
+                  eye-catching marketing
+                  collateral, I specialize in crafting designs that not only resonate with your audience but also
+                  elevate your brand
+                  identity. Let's collaborate to bring your ideas to life through thoughtful and visually compelling
+                  graphic design
+                  solutions.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="w-screen bg-[#0d0f11]">
+    <section class="mt-16 pb-14 relative">
+      <svg class="absolute z-0 opacity-10" width="200%" height="150%" x="0px" y="0px" fill="none" stroke="#fff"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M-43 773.821C160.86 662.526 451.312 637.01 610.111 733.104C768.91 829.197 932.595 1062.9 602.782 1098.75C272.969 1134.6 676.888 25.4306 1852 1"
+          style="stroke-dasharray: 3246.53, 0;"></path>
+      </svg>
+      <div class="h-full w-full">
+        <div class="flex flex-row mx-16 justify-between">
+          <div class="flex flex-col text-white mt-16">
+            <h1 class="font-bold tracking-wide text-[#e8e8e8] mx-3 xl:text-7xl sm:text-5xl lg:text-6xl">{<i>A</i>
+              variety
+              of
+              tools}
+            </h1>
+            <h1 class="my-6 font-bold tracking-wide text-[#e8e8e8] mx-3  sm:text-4xl lg:text-6xl first-letter:italic">
+              At
+              your
+              disposal</h1>
+          </div>
+          <div class="text-white mt-7">
+            <span class="font-bold tracking-wide text-[#fff] mx-3 text-8xl lg:text-8xl opacity-40">
+              **
+            </span>
+          </div>
+        </div>
+        <div class="absolute flex h-fill w-fill">
+          <span
+            class="font-bold tracking-wide mx-3 text-8xl relative bg-clip-text bg-gradient-to-tr text-white move-text-animation opacity-10 mt-20 cursor-default">laravel•react•php•html•js•tailwindcss•angular•oracle•laravel•react•php•html•js•tailwindcss•angular•oracle•laravel•react•php•html•js•tailwindcss•angular•oracle•laravel•react•php•html•js•tailwindcss•angular•oracle•laravel•react•php•html•js•tailwindcss•angular•oracle•laravel•react•php•html•js•tailwindcss•angular•oracle•laravel•react•php•html•js•tailwindcss•angular•oracle•laravel•react•php•html•js•tailwindcss•angular•oracle•laravel•react•php•html•js•tailwindcss•angular•oracle•</span>
+        </div>
+      </div>
+      <div class="w-full lg:flex-row lg:flex mt-6 gap-4 justify-center sm:grid sm:grid-rows-1">
+        <div class="group h-96 w-80 [perspective:1000px]">
+          <div
+            class="h-full w-full shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+            <div class="absolute inset-0 p-8 bg-[#fdfcf7] bg-opacity-10 rounded-xl ">
+              <div class="flex flex-col  justify-between h-full">
+                <svg class="mb-auto " width="68" height="73" class="" viewBox="0 0 68 73"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="m49.626 11.564a.809.809 0 0 1 .028.209v10.972a.8.8 0 0 1 -.402.694l-9.209 5.302v10.509c0 .286-.152.55-.4.694l-19.223 11.066c-.044.025-.092.041-.14.058-.018.006-.035.017-.054.022a.805.805 0 0 1 -.41 0c-.022-.006-.042-.018-.063-.026-.044-.016-.09-.03-.132-.054l-19.219-11.066a.801.801 0 0 1 -.402-.694v-32.916c0-.072.01-.142.028-.21.006-.023.02-.044.028-.067.015-.042.029-.085.051-.124.015-.026.037-.047.055-.071.023-.032.044-.065.071-.093.023-.023.053-.04.079-.06.029-.024.055-.05.088-.069h.001l9.61-5.533a.802.802 0 0 1 .8 0l9.61 5.533h.002c.032.02.059.045.088.068.026.02.055.038.078.06.028.029.048.062.072.094.017.024.04.045.054.071.023.04.036.082.052.124.008.023.022.044.028.068a.809.809 0 0 1 .028.209v20.559l8.008-4.611v-10.51c0-.07.01-.141.028-.208.007-.024.02-.045.028-.068.016-.042.03-.085.052-.124.015-.026.037-.047.054-.071.024-.032.044-.065.072-.093.023-.023.052-.04.078-.06.03-.024.056-.05.088-.069h.001l9.611-5.533a.801.801 0 0 1 .8 0l9.61 5.533c.034.02.06.045.09.068.025.02.054.038.077.06.028.029.048.062.072.094.018.024.04.045.054.071.023.039.036.082.052.124.009.023.022.044.028.068zm-1.574 10.718v-9.124l-3.363 1.936-4.646 2.675v9.124l8.01-4.611zm-9.61 16.505v-9.13l-4.57 2.61-13.05 7.448v9.216zm-36.84-31.068v31.068l17.618 10.143v-9.214l-9.204-5.209-.003-.002-.004-.002c-.031-.018-.057-.044-.086-.066-.025-.02-.054-.036-.076-.058l-.002-.003c-.026-.025-.044-.056-.066-.084-.02-.027-.044-.05-.06-.078l-.001-.003c-.018-.03-.029-.066-.042-.1-.013-.03-.03-.058-.038-.09v-.001c-.01-.038-.012-.078-.016-.117-.004-.03-.012-.06-.012-.09v-21.483l-4.645-2.676-3.363-1.934zm8.81-5.994-8.007 4.609 8.005 4.609 8.006-4.61-8.006-4.608zm4.164 28.764 4.645-2.674v-20.096l-3.363 1.936-4.646 2.675v20.096zm24.667-23.325-8.006 4.609 8.006 4.609 8.005-4.61zm-.801 10.605-4.646-2.675-3.363-1.936v9.124l4.645 2.674 3.364 1.937zm-18.422 20.561 11.743-6.704 5.87-3.35-8-4.606-9.211 5.303-8.395 4.833z"
+                    fill="#ff2d20" />
+                </svg>
+                <h1 class="mt-auto font-light text-4xl leading-5 text-[#efead6] block">Laravel</h1>
+              </div>
+            </div>
+            <div
+              class="absolute inset-0 h-full w-full rounded-xl bg-[#fdfcf7] p-8 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+              <div class="flex flex-col justify-between h-full">
+                <svg class="mb-auto " width="68" height="73" viewBox="0 0 68 73" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="m49.626 11.564a.809.809 0 0 1 .028.209v10.972a.8.8 0 0 1 -.402.694l-9.209 5.302v10.509c0 .286-.152.55-.4.694l-19.223 11.066c-.044.025-.092.041-.14.058-.018.006-.035.017-.054.022a.805.805 0 0 1 -.41 0c-.022-.006-.042-.018-.063-.026-.044-.016-.09-.03-.132-.054l-19.219-11.066a.801.801 0 0 1 -.402-.694v-32.916c0-.072.01-.142.028-.21.006-.023.02-.044.028-.067.015-.042.029-.085.051-.124.015-.026.037-.047.055-.071.023-.032.044-.065.071-.093.023-.023.053-.04.079-.06.029-.024.055-.05.088-.069h.001l9.61-5.533a.802.802 0 0 1 .8 0l9.61 5.533h.002c.032.02.059.045.088.068.026.02.055.038.078.06.028.029.048.062.072.094.017.024.04.045.054.071.023.04.036.082.052.124.008.023.022.044.028.068a.809.809 0 0 1 .028.209v20.559l8.008-4.611v-10.51c0-.07.01-.141.028-.208.007-.024.02-.045.028-.068.016-.042.03-.085.052-.124.015-.026.037-.047.054-.071.024-.032.044-.065.072-.093.023-.023.052-.04.078-.06.03-.024.056-.05.088-.069h.001l9.611-5.533a.801.801 0 0 1 .8 0l9.61 5.533c.034.02.06.045.09.068.025.02.054.038.077.06.028.029.048.062.072.094.018.024.04.045.054.071.023.039.036.082.052.124.009.023.022.044.028.068zm-1.574 10.718v-9.124l-3.363 1.936-4.646 2.675v9.124l8.01-4.611zm-9.61 16.505v-9.13l-4.57 2.61-13.05 7.448v9.216zm-36.84-31.068v31.068l17.618 10.143v-9.214l-9.204-5.209-.003-.002-.004-.002c-.031-.018-.057-.044-.086-.066-.025-.02-.054-.036-.076-.058l-.002-.003c-.026-.025-.044-.056-.066-.084-.02-.027-.044-.05-.06-.078l-.001-.003c-.018-.03-.029-.066-.042-.1-.013-.03-.03-.058-.038-.09v-.001c-.01-.038-.012-.078-.016-.117-.004-.03-.012-.06-.012-.09v-21.483l-4.645-2.676-3.363-1.934zm8.81-5.994-8.007 4.609 8.005 4.609 8.006-4.61-8.006-4.608zm4.164 28.764 4.645-2.674v-20.096l-3.363 1.936-4.646 2.675v20.096zm24.667-23.325-8.006 4.609 8.006 4.609 8.005-4.61zm-.801 10.605-4.646-2.675-3.363-1.936v9.124l4.645 2.674 3.364 1.937zm-18.422 20.561 11.743-6.704 5.87-3.35-8-4.606-9.211 5.303-8.395 4.833z"
+                    fill="#ff2d20" />
+                </svg>
+                <div class="mt-auto space-y-4">
+                  <p class="text-[#0d0f11] text-lg font-light leading-5">Crafting Excellence: Laravel, Livewire,
+                    FilamentPHP. Elevate your projects with Laravel's elegance, Livewire's real-time
+                    magic, and FilamentPHP's sleek administration. It's more than a stack — it's a powerhouse trio
+                    delivering efficiency,
+                    scalability, and joy in every project.</p>
+                  <p class="text-[#0d0f11] text-lg font-light leading-5">Laravel Livewire FilamentPHP</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="group h-96 w-80 [perspective:1000px]">
+          <div
+            class="h-full w-full shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+            <div class="absolute inset-0 p-8 bg-[#fdfcf7] bg-opacity-10 rounded-xl">
+              <div class="flex flex-col justify-between h-full">
+                <svg viewBox="175.7 78 490.6 436.9" width="68" height="73" xmlns="http://www.w3.org/2000/svg">
+                  <g fill="#61dafb">
+                    <path
+                      d="m666.3 296.5c0-32.5-40.7-63.3-103.1-82.4 14.4-63.6 8-114.2-20.2-130.4-6.5-3.8-14.1-5.6-22.4-5.6v22.3c4.6 0 8.3.9 11.4 2.6 13.6 7.8 19.5 37.5 14.9 75.7-1.1 9.4-2.9 19.3-5.1 29.4-19.6-4.8-41-8.5-63.5-10.9-13.5-18.5-27.5-35.3-41.6-50 32.6-30.3 63.2-46.9 84-46.9v-22.3c-27.5 0-63.5 19.6-99.9 53.6-36.4-33.8-72.4-53.2-99.9-53.2v22.3c20.7 0 51.4 16.5 84 46.6-14 14.7-28 31.4-41.3 49.9-22.6 2.4-44 6.1-63.6 11-2.3-10-4-19.7-5.2-29-4.7-38.2 1.1-67.9 14.6-75.8 3-1.8 6.9-2.6 11.5-2.6v-22.3c-8.4 0-16 1.8-22.6 5.6-28.1 16.2-34.4 66.7-19.9 130.1-62.2 19.2-102.7 49.9-102.7 82.3 0 32.5 40.7 63.3 103.1 82.4-14.4 63.6-8 114.2 20.2 130.4 6.5 3.8 14.1 5.6 22.5 5.6 27.5 0 63.5-19.6 99.9-53.6 36.4 33.8 72.4 53.2 99.9 53.2 8.4 0 16-1.8 22.6-5.6 28.1-16.2 34.4-66.7 19.9-130.1 62-19.1 102.5-49.9 102.5-82.3zm-130.2-66.7c-3.7 12.9-8.3 26.2-13.5 39.5-4.1-8-8.4-16-13.1-24-4.6-8-9.5-15.8-14.4-23.4 14.2 2.1 27.9 4.7 41 7.9zm-45.8 106.5c-7.8 13.5-15.8 26.3-24.1 38.2-14.9 1.3-30 2-45.2 2-15.1 0-30.2-.7-45-1.9-8.3-11.9-16.4-24.6-24.2-38-7.6-13.1-14.5-26.4-20.8-39.8 6.2-13.4 13.2-26.8 20.7-39.9 7.8-13.5 15.8-26.3 24.1-38.2 14.9-1.3 30-2 45.2-2 15.1 0 30.2.7 45 1.9 8.3 11.9 16.4 24.6 24.2 38 7.6 13.1 14.5 26.4 20.8 39.8-6.3 13.4-13.2 26.8-20.7 39.9zm32.3-13c5.4 13.4 10 26.8 13.8 39.8-13.1 3.2-26.9 5.9-41.2 8 4.9-7.7 9.8-15.6 14.4-23.7 4.6-8 8.9-16.1 13-24.1zm-101.4 106.7c-9.3-9.6-18.6-20.3-27.8-32 9 .4 18.2.7 27.5.7 9.4 0 18.7-.2 27.8-.7-9 11.7-18.3 22.4-27.5 32zm-74.4-58.9c-14.2-2.1-27.9-4.7-41-7.9 3.7-12.9 8.3-26.2 13.5-39.5 4.1 8 8.4 16 13.1 24s9.5 15.8 14.4 23.4zm73.9-208.1c9.3 9.6 18.6 20.3 27.8 32-9-.4-18.2-.7-27.5-.7-9.4 0-18.7.2-27.8.7 9-11.7 18.3-22.4 27.5-32zm-74 58.9c-4.9 7.7-9.8 15.6-14.4 23.7-4.6 8-8.9 16-13 24-5.4-13.4-10-26.8-13.8-39.8 13.1-3.1 26.9-5.8 41.2-7.9zm-90.5 125.2c-35.4-15.1-58.3-34.9-58.3-50.6s22.9-35.6 58.3-50.6c8.6-3.7 18-7 27.7-10.1 5.7 19.6 13.2 40 22.5 60.9-9.2 20.8-16.6 41.1-22.2 60.6-9.9-3.1-19.3-6.5-28-10.2zm53.8 142.9c-13.6-7.8-19.5-37.5-14.9-75.7 1.1-9.4 2.9-19.3 5.1-29.4 19.6 4.8 41 8.5 63.5 10.9 13.5 18.5 27.5 35.3 41.6 50-32.6 30.3-63.2 46.9-84 46.9-4.5-.1-8.3-1-11.3-2.7zm237.2-76.2c4.7 38.2-1.1 67.9-14.6 75.8-3 1.8-6.9 2.6-11.5 2.6-20.7 0-51.4-16.5-84-46.6 14-14.7 28-31.4 41.3-49.9 22.6-2.4 44-6.1 63.6-11 2.3 10.1 4.1 19.8 5.2 29.1zm38.5-66.7c-8.6 3.7-18 7-27.7 10.1-5.7-19.6-13.2-40-22.5-60.9 9.2-20.8 16.6-41.1 22.2-60.6 9.9 3.1 19.3 6.5 28.1 10.2 35.4 15.1 58.3 34.9 58.3 50.6-.1 15.7-23 35.6-58.4 50.6z" />
+                    <circle cx="420.9" cy="296.5" r="45.7" />
+                  </g>
+                </svg>
+                <h1 class="mt-auto font-light text-4xl leading-5 text-[#efead6] block">ReactJs</h1>
+              </div>
+            </div>
+            <div
+              class="absolute inset-0 h-full w-full rounded-xl bg-[#fdfcf7] p-8 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+              <div class="flex flex-col justify-between h-full">
+                <svg viewBox="175.7 78 490.6 436.9" width="68" height="73" xmlns="http://www.w3.org/2000/svg">
+                  <g fill="#61dafb">
+                    <path
+                      d="m666.3 296.5c0-32.5-40.7-63.3-103.1-82.4 14.4-63.6 8-114.2-20.2-130.4-6.5-3.8-14.1-5.6-22.4-5.6v22.3c4.6 0 8.3.9 11.4 2.6 13.6 7.8 19.5 37.5 14.9 75.7-1.1 9.4-2.9 19.3-5.1 29.4-19.6-4.8-41-8.5-63.5-10.9-13.5-18.5-27.5-35.3-41.6-50 32.6-30.3 63.2-46.9 84-46.9v-22.3c-27.5 0-63.5 19.6-99.9 53.6-36.4-33.8-72.4-53.2-99.9-53.2v22.3c20.7 0 51.4 16.5 84 46.6-14 14.7-28 31.4-41.3 49.9-22.6 2.4-44 6.1-63.6 11-2.3-10-4-19.7-5.2-29-4.7-38.2 1.1-67.9 14.6-75.8 3-1.8 6.9-2.6 11.5-2.6v-22.3c-8.4 0-16 1.8-22.6 5.6-28.1 16.2-34.4 66.7-19.9 130.1-62.2 19.2-102.7 49.9-102.7 82.3 0 32.5 40.7 63.3 103.1 82.4-14.4 63.6-8 114.2 20.2 130.4 6.5 3.8 14.1 5.6 22.5 5.6 27.5 0 63.5-19.6 99.9-53.6 36.4 33.8 72.4 53.2 99.9 53.2 8.4 0 16-1.8 22.6-5.6 28.1-16.2 34.4-66.7 19.9-130.1 62-19.1 102.5-49.9 102.5-82.3zm-130.2-66.7c-3.7 12.9-8.3 26.2-13.5 39.5-4.1-8-8.4-16-13.1-24-4.6-8-9.5-15.8-14.4-23.4 14.2 2.1 27.9 4.7 41 7.9zm-45.8 106.5c-7.8 13.5-15.8 26.3-24.1 38.2-14.9 1.3-30 2-45.2 2-15.1 0-30.2-.7-45-1.9-8.3-11.9-16.4-24.6-24.2-38-7.6-13.1-14.5-26.4-20.8-39.8 6.2-13.4 13.2-26.8 20.7-39.9 7.8-13.5 15.8-26.3 24.1-38.2 14.9-1.3 30-2 45.2-2 15.1 0 30.2.7 45 1.9 8.3 11.9 16.4 24.6 24.2 38 7.6 13.1 14.5 26.4 20.8 39.8-6.3 13.4-13.2 26.8-20.7 39.9zm32.3-13c5.4 13.4 10 26.8 13.8 39.8-13.1 3.2-26.9 5.9-41.2 8 4.9-7.7 9.8-15.6 14.4-23.7 4.6-8 8.9-16.1 13-24.1zm-101.4 106.7c-9.3-9.6-18.6-20.3-27.8-32 9 .4 18.2.7 27.5.7 9.4 0 18.7-.2 27.8-.7-9 11.7-18.3 22.4-27.5 32zm-74.4-58.9c-14.2-2.1-27.9-4.7-41-7.9 3.7-12.9 8.3-26.2 13.5-39.5 4.1 8 8.4 16 13.1 24s9.5 15.8 14.4 23.4zm73.9-208.1c9.3 9.6 18.6 20.3 27.8 32-9-.4-18.2-.7-27.5-.7-9.4 0-18.7.2-27.8.7 9-11.7 18.3-22.4 27.5-32zm-74 58.9c-4.9 7.7-9.8 15.6-14.4 23.7-4.6 8-8.9 16-13 24-5.4-13.4-10-26.8-13.8-39.8 13.1-3.1 26.9-5.8 41.2-7.9zm-90.5 125.2c-35.4-15.1-58.3-34.9-58.3-50.6s22.9-35.6 58.3-50.6c8.6-3.7 18-7 27.7-10.1 5.7 19.6 13.2 40 22.5 60.9-9.2 20.8-16.6 41.1-22.2 60.6-9.9-3.1-19.3-6.5-28-10.2zm53.8 142.9c-13.6-7.8-19.5-37.5-14.9-75.7 1.1-9.4 2.9-19.3 5.1-29.4 19.6 4.8 41 8.5 63.5 10.9 13.5 18.5 27.5 35.3 41.6 50-32.6 30.3-63.2 46.9-84 46.9-4.5-.1-8.3-1-11.3-2.7zm237.2-76.2c4.7 38.2-1.1 67.9-14.6 75.8-3 1.8-6.9 2.6-11.5 2.6-20.7 0-51.4-16.5-84-46.6 14-14.7 28-31.4 41.3-49.9 22.6-2.4 44-6.1 63.6-11 2.3 10.1 4.1 19.8 5.2 29.1zm38.5-66.7c-8.6 3.7-18 7-27.7 10.1-5.7-19.6-13.2-40-22.5-60.9 9.2-20.8 16.6-41.1 22.2-60.6 9.9 3.1 19.3 6.5 28.1 10.2 35.4 15.1 58.3 34.9 58.3 50.6-.1 15.7-23 35.6-58.4 50.6z" />
+                    <circle cx="420.9" cy="296.5" r="45.7" />
+                  </g>
+                </svg>
+                <div class="mt-auto space-y-4">
+                  <p class="text-[#0d0f11] text-lg font-light leading-5">In my coding journey, ReactJS is the secret
+                    sauce for dynamic, responsive, and impactful web solutions. With its modular
+                    simplicity and unparalleled flexibility, React transforms code into a canvas for your vision.
+                    Welcome to a world where
+                    every line breathes life into innovation.</p>
+                  <p class="text-[#0d0f11] text-lg font-light leading-5">ReactJS</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="group h-96 w-80 [perspective:1000px]">
+          <div
+            class="h-full w-full shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+            <div class="absolute inset-0 p-8 bg-[#fdfcf7] bg-opacity-10 rounded-xl">
+              <div class="flex flex-col justify-between h-full">
+                <svg width="68" height="73" preserveAspectRatio="xMidYMid" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 153.6">
+                  <linearGradient id="a" x1="-2.778%" y1="32%" y2="67.556%">
+                    <stop offset="0" stop-color="#2298bd" />
+                    <stop offset="1" stop-color="#0ed7b5" />
+                  </linearGradient>
+                  <path
+                    d="M128 0C93.867 0 72.533 17.067 64 51.2 76.8 34.133 91.733 27.733 108.8 32c9.737 2.434 16.697 9.499 24.401 17.318C145.751 62.057 160.275 76.8 192 76.8c34.133 0 55.467-17.067 64-51.2-12.8 17.067-27.733 23.467-44.8 19.2-9.737-2.434-16.697-9.499-24.401-17.318C174.249 14.743 159.725 0 128 0zM64 76.8C29.867 76.8 8.533 93.867 0 128c12.8-17.067 27.733-23.467 44.8-19.2 9.737 2.434 16.697 9.499 24.401 17.318C81.751 138.857 96.275 153.6 128 153.6c34.133 0 55.467-17.067 64-51.2-12.8 17.067-27.733 23.467-44.8 19.2-9.737-2.434-16.697-9.499-24.401-17.318C110.249 91.543 95.725 76.8 64 76.8z"
+                    fill="url(#a)" />
+                </svg>
+                <h1 class="mt-auto font-light text-4xl leading-5 text-[#efead6] block">TailwindCSS</h1>
+              </div>
+            </div>
+            <div
+              class="absolute inset-0 h-full w-full rounded-xl bg-[#fdfcf7] p-8 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+              <div class="flex flex-col justify-between h-full">
+                <svg width="68" height="73" preserveAspectRatio="xMidYMid" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 153.6">
+                  <linearGradient id="a" x1="-2.778%" y1="32%" y2="67.556%">
+                    <stop offset="0" stop-color="#2298bd" />
+                    <stop offset="1" stop-color="#0ed7b5" />
+                  </linearGradient>
+                  <path
+                    d="M128 0C93.867 0 72.533 17.067 64 51.2 76.8 34.133 91.733 27.733 108.8 32c9.737 2.434 16.697 9.499 24.401 17.318C145.751 62.057 160.275 76.8 192 76.8c34.133 0 55.467-17.067 64-51.2-12.8 17.067-27.733 23.467-44.8 19.2-9.737-2.434-16.697-9.499-24.401-17.318C174.249 14.743 159.725 0 128 0zM64 76.8C29.867 76.8 8.533 93.867 0 128c12.8-17.067 27.733-23.467 44.8-19.2 9.737 2.434 16.697 9.499 24.401 17.318C81.751 138.857 96.275 153.6 128 153.6c34.133 0 55.467-17.067 64-51.2-12.8 17.067-27.733 23.467-44.8 19.2-9.737-2.434-16.697-9.499-24.401-17.318C110.249 91.543 95.725 76.8 64 76.8z"
+                    fill="url(#a)" />
+                </svg>
+                <div class="mt-auto space-y-4">
+                  <p class="text-[#0d0f11] text-lg font-light leading-5">Craft sleek, responsive interfaces
+                    effortlessly with Tailwind CSS. It's the toolkit that breaks design boundaries,
+                    offering a streamlined coding experience. Elevate your projects with Tailwind — where simplicity
+                    meets style in every
+                    class. Welcome to design freedom!</p>
+                  <p class="text-[#0d0f11] text-lg font-light leading-5">TailwindCSS</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full lg:flex-row lg:flex mt-6 gap-4 justify-center sm:grid sm:grid-rows-1">
+        <div class="group h-96 w-80 [perspective:1000px]">
+          <div
+            class="h-full w-full shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+            <div class="absolute inset-0 p-8 bg-[#fdfcf7] bg-opacity-10 rounded-xl">
+              <div class="flex flex-col justify-between h-full">
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="68" height="73">
+                  <path fill="#007acc" d="M0 200V0h400v400H0" />
+                  <path fill="#0d0f11"
+                    d="M87.7 200.7V217h52v148h36.9V217h52v-16c0-9 0-16.3-.4-16.5 0-.3-31.7-.4-70.2-.4l-70 .3v16.4l-.3-.1zM321.4 184c10.2 2.4 18 7 25 14.3 3.7 4 9.2 11 9.6 12.8 0 .6-17.3 12.3-27.8 18.8-.4.3-2-1.4-3.6-4-5.2-7.4-10.5-10.6-18.8-11.2-12-.8-20 5.5-20 16 0 3.2.6 5 1.8 7.6 2.7 5.5 7.7 8.8 23.2 15.6 28.6 12.3 41 20.4 48.5 32 8.5 13 10.4 33.4 4.7 48.7-6.4 16.7-22 28-44.3 31.7-7 1.2-23 1-30.5-.3-16-3-31.3-11-40.7-21.3-3.7-4-10.8-14.7-10.4-15.4l3.8-2.4 15-8.7 11.3-6.6 2.6 3.5c3.3 5.2 10.7 12.2 15 14.6 13 6.7 30.4 5.8 39-2 3.7-3.4 5.3-7 5.3-12 0-4.6-.7-6.7-3-10.2-3.2-4.4-9.6-8-27.6-16-20.7-8.8-29.5-14.4-37.7-23-4.7-5.2-9-13.3-11-20-1.5-5.8-2-20-.6-25.7 4.3-20 19.4-34 41-38 7-1.4 23.5-.8 30.4 1l-.2.2z" />
+                </svg>
+                <h1 class="mt-auto font-light text-4xl leading-5 text-[#efead6] block">TypeScript</h1>
+              </div>
+            </div>
+            <div
+              class="absolute inset-0 h-full w-full rounded-xl bg-[#fdfcf7] p-8 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+              <div class="flex flex-col justify-between h-full">
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="68" height="73">
+                  <path fill="#007acc" d="M0 200V0h400v400H0" />
+                  <path fill="#fff"
+                    d="M87.7 200.7V217h52v148h36.9V217h52v-16c0-9 0-16.3-.4-16.5 0-.3-31.7-.4-70.2-.4l-70 .3v16.4l-.3-.1zM321.4 184c10.2 2.4 18 7 25 14.3 3.7 4 9.2 11 9.6 12.8 0 .6-17.3 12.3-27.8 18.8-.4.3-2-1.4-3.6-4-5.2-7.4-10.5-10.6-18.8-11.2-12-.8-20 5.5-20 16 0 3.2.6 5 1.8 7.6 2.7 5.5 7.7 8.8 23.2 15.6 28.6 12.3 41 20.4 48.5 32 8.5 13 10.4 33.4 4.7 48.7-6.4 16.7-22 28-44.3 31.7-7 1.2-23 1-30.5-.3-16-3-31.3-11-40.7-21.3-3.7-4-10.8-14.7-10.4-15.4l3.8-2.4 15-8.7 11.3-6.6 2.6 3.5c3.3 5.2 10.7 12.2 15 14.6 13 6.7 30.4 5.8 39-2 3.7-3.4 5.3-7 5.3-12 0-4.6-.7-6.7-3-10.2-3.2-4.4-9.6-8-27.6-16-20.7-8.8-29.5-14.4-37.7-23-4.7-5.2-9-13.3-11-20-1.5-5.8-2-20-.6-25.7 4.3-20 19.4-34 41-38 7-1.4 23.5-.8 30.4 1l-.2.2z" />
+                </svg>
+                <div class="mt-auto space-y-4">
+                  <p class="text-[#0d0f11] text-lg font-light leading-5">Level up your code game with TypeScript —
+                    where every line packs strength, scalability, and zero-compromise confidence.
+                    Welcome to the future of JavaScript development!</p>
+                  <p class="text-[#0d0f11] text-lg font-light leading-5">TypeScript</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="group h-96 w-80 [perspective:1000px]">
+          <div
+            class="h-full w-full shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+            <div class="absolute inset-0 p-8 bg-[#fdfcf7] bg-opacity-10 rounded-xl">
+              <div class="flex flex-col justify-between h-full">
+                <svg width="68" height="73" viewBox="0 0 256 272" xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="xMidYMid">
+                  <path d="M.1 45.522L125.908.697l129.196 44.028-20.919 166.45-108.277 59.966-106.583-59.169L.1 45.522z"
+                    fill="#E23237" />
+                  <path d="M255.104 44.725L125.908.697v270.444l108.277-59.866 20.919-166.55z" fill="#B52E31" />
+                  <path
+                    d="M126.107 32.274L47.714 206.693l29.285-.498 15.739-39.347h70.325l17.233 39.845 27.99.498-82.179-174.917zm.2 55.882l26.496 55.383h-49.806l23.31-55.383z"
+                    fill="#FFF" />
+                </svg>
+                <h1 class="mt-auto font-light text-4xl leading-5 text-[#efead6] block">Angular</h1>
+              </div>
+            </div>
+            <div
+              class="absolute inset-0 h-full w-full rounded-xl bg-[#fdfcf7] p-8 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+              <div class="flex flex-col justify-between h-full">
+                <svg width="68" height="73" viewBox="0 0 256 272" xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="xMidYMid">
+                  <path d="M.1 45.522L125.908.697l129.196 44.028-20.919 166.45-108.277 59.966-106.583-59.169L.1 45.522z"
+                    fill="#E23237" />
+                  <path d="M255.104 44.725L125.908.697v270.444l108.277-59.866 20.919-166.55z" fill="#B52E31" />
+                  <path
+                    d="M126.107 32.274L47.714 206.693l29.285-.498 15.739-39.347h70.325l17.233 39.845 27.99.498-82.179-174.917zm.2 55.882l26.496 55.383h-49.806l23.31-55.383z"
+                    fill="#FFF" />
+                </svg>
+                <g fill="#61dafb">
+                  <path
+                    d="m666.3 296.5c0-32.5-40.7-63.3-103.1-82.4 14.4-63.6 8-114.2-20.2-130.4-6.5-3.8-14.1-5.6-22.4-5.6v22.3c4.6 0 8.3.9 11.4 2.6 13.6 7.8 19.5 37.5 14.9 75.7-1.1 9.4-2.9 19.3-5.1 29.4-19.6-4.8-41-8.5-63.5-10.9-13.5-18.5-27.5-35.3-41.6-50 32.6-30.3 63.2-46.9 84-46.9v-22.3c-27.5 0-63.5 19.6-99.9 53.6-36.4-33.8-72.4-53.2-99.9-53.2v22.3c20.7 0 51.4 16.5 84 46.6-14 14.7-28 31.4-41.3 49.9-22.6 2.4-44 6.1-63.6 11-2.3-10-4-19.7-5.2-29-4.7-38.2 1.1-67.9 14.6-75.8 3-1.8 6.9-2.6 11.5-2.6v-22.3c-8.4 0-16 1.8-22.6 5.6-28.1 16.2-34.4 66.7-19.9 130.1-62.2 19.2-102.7 49.9-102.7 82.3 0 32.5 40.7 63.3 103.1 82.4-14.4 63.6-8 114.2 20.2 130.4 6.5 3.8 14.1 5.6 22.5 5.6 27.5 0 63.5-19.6 99.9-53.6 36.4 33.8 72.4 53.2 99.9 53.2 8.4 0 16-1.8 22.6-5.6 28.1-16.2 34.4-66.7 19.9-130.1 62-19.1 102.5-49.9 102.5-82.3zm-130.2-66.7c-3.7 12.9-8.3 26.2-13.5 39.5-4.1-8-8.4-16-13.1-24-4.6-8-9.5-15.8-14.4-23.4 14.2 2.1 27.9 4.7 41 7.9zm-45.8 106.5c-7.8 13.5-15.8 26.3-24.1 38.2-14.9 1.3-30 2-45.2 2-15.1 0-30.2-.7-45-1.9-8.3-11.9-16.4-24.6-24.2-38-7.6-13.1-14.5-26.4-20.8-39.8 6.2-13.4 13.2-26.8 20.7-39.9 7.8-13.5 15.8-26.3 24.1-38.2 14.9-1.3 30-2 45.2-2 15.1 0 30.2.7 45 1.9 8.3 11.9 16.4 24.6 24.2 38 7.6 13.1 14.5 26.4 20.8 39.8-6.3 13.4-13.2 26.8-20.7 39.9zm32.3-13c5.4 13.4 10 26.8 13.8 39.8-13.1 3.2-26.9 5.9-41.2 8 4.9-7.7 9.8-15.6 14.4-23.7 4.6-8 8.9-16.1 13-24.1zm-101.4 106.7c-9.3-9.6-18.6-20.3-27.8-32 9 .4 18.2.7 27.5.7 9.4 0 18.7-.2 27.8-.7-9 11.7-18.3 22.4-27.5 32zm-74.4-58.9c-14.2-2.1-27.9-4.7-41-7.9 3.7-12.9 8.3-26.2 13.5-39.5 4.1 8 8.4 16 13.1 24s9.5 15.8 14.4 23.4zm73.9-208.1c9.3 9.6 18.6 20.3 27.8 32-9-.4-18.2-.7-27.5-.7-9.4 0-18.7.2-27.8.7 9-11.7 18.3-22.4 27.5-32zm-74 58.9c-4.9 7.7-9.8 15.6-14.4 23.7-4.6 8-8.9 16-13 24-5.4-13.4-10-26.8-13.8-39.8 13.1-3.1 26.9-5.8 41.2-7.9zm-90.5 125.2c-35.4-15.1-58.3-34.9-58.3-50.6s22.9-35.6 58.3-50.6c8.6-3.7 18-7 27.7-10.1 5.7 19.6 13.2 40 22.5 60.9-9.2 20.8-16.6 41.1-22.2 60.6-9.9-3.1-19.3-6.5-28-10.2zm53.8 142.9c-13.6-7.8-19.5-37.5-14.9-75.7 1.1-9.4 2.9-19.3 5.1-29.4 19.6 4.8 41 8.5 63.5 10.9 13.5 18.5 27.5 35.3 41.6 50-32.6 30.3-63.2 46.9-84 46.9-4.5-.1-8.3-1-11.3-2.7zm237.2-76.2c4.7 38.2-1.1 67.9-14.6 75.8-3 1.8-6.9 2.6-11.5 2.6-20.7 0-51.4-16.5-84-46.6 14-14.7 28-31.4 41.3-49.9 22.6-2.4 44-6.1 63.6-11 2.3 10.1 4.1 19.8 5.2 29.1zm38.5-66.7c-8.6 3.7-18 7-27.7 10.1-5.7-19.6-13.2-40-22.5-60.9 9.2-20.8 16.6-41.1 22.2-60.6 9.9 3.1 19.3 6.5 28.1 10.2 35.4 15.1 58.3 34.9 58.3 50.6-.1 15.7-23 35.6-58.4 50.6z" />
+                  <circle cx="420.9" cy="296.5" r="45.7" />
+                </g>
+                </svg>
+                <div class="mt-auto space-y-4">
+                  <p class="text-[#0d0f11] text-lg font-light leading-5">Angular: Revolutionizing UI/UX! Craft
+                    seamless interactions and dynamic interfaces that redefine digital brilliance with
+                    Angular — where every click is an experience.</p>
+                  <p class="text-[#0d0f11] text-lg font-light leading-5">Angular</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="group h-96 w-80 [perspective:1000px]">
+          <div
+            class="h-full w-full shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+            <div class="absolute inset-0 p-8 bg-[#fdfcf7] bg-opacity-10 rounded-xl">
+              <div class="flex flex-col justify-between h-full">
+                <svg width="68" height="73" viewBox="0 0.3 31.4 19.8" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.9 20.1c-5.5 0-9.9-4.4-9.9-9.9S4.4.3 9.9.3h11.6c5.5 0 9.9 4.4 9.9 9.9s-4.4 9.9-9.9 9.9zm11.3-3.5c3.6 0 6.4-2.9 6.4-6.4 0-3.6-2.9-6.4-6.4-6.4h-11c-3.6 0-6.4 2.9-6.4 6.4s2.9 6.4 6.4 6.4z"
+                    fill="#c74634" />
+                </svg>
+                <h1 class="mt-auto font-light text-4xl leading-5 text-[#efead6] block">Oracle SQL</h1>
+              </div>
+            </div>
+            <div
+              class="absolute inset-0 h-full w-full rounded-xl bg-[#fdfcf7] p-8 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+              <div class="flex flex-col justify-between h-full">
+                <svg width="68" height="73" viewBox="0 0.3 31.4 19.8" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.9 20.1c-5.5 0-9.9-4.4-9.9-9.9S4.4.3 9.9.3h11.6c5.5 0 9.9 4.4 9.9 9.9s-4.4 9.9-9.9 9.9zm11.3-3.5c3.6 0 6.4-2.9 6.4-6.4 0-3.6-2.9-6.4-6.4-6.4h-11c-3.6 0-6.4 2.9-6.4 6.4s2.9 6.4 6.4 6.4z"
+                    fill="#c74634" />
+                </svg>
+                <div class="mt-auto space-y-4">
+                  <p class="text-[#0d0f11] text-lg font-light leading-5">Master data manipulation with Oracle SQL —
+                    where every command is a step towards database excellence. Welcome to
+                    efficient and reliable data management!</p>
+                  <p class="text-[#0d0f11] text-lg font-light leading-5">OracleSQL</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="relative h-screen w-screen">
+      <div class="w-full h-full">
+        <div class="absolute bg-white m-3 rounded-3xl w-fill h-fill z-0">
+          <div class="flex flex-row mx-16 justify-end z-10">
+            <div class="flex flex-col text-[#0d0f11] mt-16">
+              <h1
+                class="font-bold tracking-wide text-end text-[#0d0f11] mx-3 xl:text-7xl sm:text-5xl w-fit lg:text-6xl first-letter:italic border-b-4 border-purple-300">
+                Size does not matter,
+              </h1>
+              <h1
+                class="my-6 font-bold tracking-wide text-end text-[#0d0f11] mx-3  sm:text-2xl lg:text-3xl first-letter:italic  ">
+                Well, at least when it come to screen size</h1>
+            </div>
+          </div>
+          <div class="flex flex-row justify-between w-full mx-3 relative z-10">
+            <img src="assets/Images/Asset 5_1.png" alt="" class="w-[50%] lg:block sm:hidden">
+            <div class="flex flex-row mx-16 items-center ">
+              <div class="flex flex-col text-[#0d0f11] mt-16 items-end">
+                <h1
+                  class="my-6 tracking-wide md:text-end text-[#1e2225] mx-3  sm:text-4xl lg:text-6xl first-letter:italic sm:w-full sm:text-center">
+                  Whether it is mobile or desktop your project will always look stunning.
+                </h1>
+              </div>
+            </div>
+          </div>
+          <div class="absolute bottom-0 right-0 overflow-hidden z-20">
+            <img
+              class="w-full h-auto origin-bottom-right transform scale-150 lg:w-auto lg:mx-auto lg:object-cover lg:scale-75"
+              src="assets/Images/background-pattern-grid.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="w-screen bg-[#0d0f11] pb-8">
+      <div class="h-full w-full">
+        <div class="lg:flex lg:flex-row sm:flex-col md:mx-16 h-[90%] lg:pt-20 items-center lg:justify-around sm:hidden">
+          <div class="container px-6 py-12 mx-auto">
+            <div class="grid items-center gap-4 xl:grid-cols-5">
+              <div class="max-w-2xl mx-auto my-8 space-y-4 text-center xl:col-span-2 xl:text-left">
+                <h1
+                  class="font-bold tracking-wide text-[#e8e8e8] xl:text-7xl lg:text-6xl first-letter:italic sm:text-5xl">
+                  Testimonials
+                </h1>
+                <h1 class="md:my-6 font-semibold tracking-wide text-[#e8e8e8] mx-3 xl:text-4xl lg:text-3xl sm:text-xl">
+                  Listen to
+                  what
+                  previous
+                  clients had to say
+                </h1>
+              </div>
+              <div class="p-6 xl:col-span-3">
+                <div class="grid gap-4 md:grid-cols-2">
+                  <div class="grid content-center gap-4">
+                    <div class="p-6 rounded shadow-md bg-gray-50">
+                      <p>"Working with Deivid was an absolute game-changer for my personal copywriting portfolio. His
+                        keen understanding of my
+                        unique voice and style translated seamlessly into a compelling showcase of my work. Deivid's
+                        dedication to capturing the
+                        essence of my brand was evident in every word he crafted. The portfolio he created not only
+                        impressed potential clients
+                        but also landed me exciting projects. Deivid is not just a skilled copywriter; he's a strategic
+                        storyteller who knows
+                        how to elevate your brand through words. I'm grateful for his expertise and highly recommend him
+                        to anyone looking to
+                        stand out in the competitive world of copywriting."</p>
+                      <div class="flex items-center mt-4 space-x-4">
+                        <img src="assets/Images/3D1D5560.png" alt=""
+                          class="w-12 h-auto bg-center bg-cover rounded-full ">
+                        <div>
+                          <p class="text-lg font-semibold">Fabio Cani</p>
+                          <p class="text-sm text-gray-600">Copywriter</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="p-6 rounded shadow-md bg-gray-50">
+                      <p>"Deivid's expertise in crafting the narrative for my DJ website has been nothing short of
+                        phenomenal. His ability to
+                        encapsulate the energy, vibe, and unique musical style into compelling content has truly set my
+                        site apart. Deivid
+                        seamlessly translated my vision into words that resonate with my audience, creating a magnetic
+                        online presence. His
+                        attention to detail and commitment to understanding the essence of my brand resulted in a
+                        website that not only looks
+                        stunning but also tells a captivating story. Working with Deivid was a game-changer for my
+                        brand, and I wholeheartedly
+                        recommend his services to anyone looking to make a lasting impression in the music industry."
+                      </p>
+                      <div class="flex items-center mt-4 space-x-4">
+                        <img src="assets/Images/ErtaDJ.jpg" alt="" class="w-12 h-12 bg-center bg-cover rounded-full">
+                        <div>
+                          <p class="text-lg font-semibold">Erta Agolli</p>
+                          <p class="text-sm text-gray-600">DJ</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid content-center gap-4">
+                    <div class="p-6 rounded shadow-md bg-gray-50">
+                      <p>"Deivid's creative prowess took our Instagram page, ShtoaPaGota, to new heights. As the
+                        mastermind behind all graphical
+                        designs, Deivid breathed life into our visual identity. His innovative approach and keen eye for
+                        aesthetics transformed
+                        our page into a captivating visual journey. From engaging posts to eye-catching stories,
+                        Deivid's designs not only
+                        amplified our brand but also resonated with our audience. His commitment to excellence and
+                        ability to capture the
+                        essence of ShtoaPaGota's vibe made him an invaluable asset to our team. If you're seeking a
+                        graphic designer who
+                        seamlessly blends creativity with brand identity, Deivid is the ultimate choice."</p>
+                      <div class="flex items-center mt-4 space-x-4">
+                        <img src="assets/Images/Shota_Logo_Black_small.png" alt=""
+                          class="w-12 h-auto bg-center bg-cover rounded-full ">
+                        <div>
+                          <p class="text-lg font-semibold">ShotaPaGota</p>
+                          <p class="text-sm text-gray-600">Instagram Page</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="min-w-screen min-h-screenflex items-center justify-center py-5 lg:hidden">
+          <div class="w-full px-5 py-16 md:py-24 text-gray-800">
+            <div class="w-full max-w-6xl mx-auto">
+              <div class="text-center max-w-xl mx-auto">
+                <h1 class="text-6xl md:text-7xl font-bold mb-5 text-white">Testimonials<br></h1>
+                <h3 class="text-xl mb-5 font-light text-white">Listen to
+                  what
+                  previous
+                  clients had to say</h3>
+                <div class="text-center mb-10">
+                  <span class="inline-block w-1 h-1 rounded-full bg-indigo-500 ml-1"></span>
+                  <span class="inline-block w-3 h-1 rounded-full bg-indigo-500 ml-1"></span>
+                  <span class="inline-block w-40 h-1 rounded-full bg-indigo-500"></span>
+                  <span class="inline-block w-3 h-1 rounded-full bg-indigo-500 ml-1"></span>
+                  <span class="inline-block w-1 h-1 rounded-full bg-indigo-500 ml-1"></span>
+                </div>
+              </div>
+              <div class="-mx-3 md:flex items-start">
+                <div class="px-3 md:w-1/3">
+                  <div
+                    class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
+                    <div class="w-full flex mb-4 items-center">
+                      <div class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200">
+                        <img src="3D1D5560.png" alt="" class="w-10 h-auto bg-center bg-cover rounded-full">
+                      </div>
+                      <div class="flex-grow pl-3">
+                        <h6 class="font-bold text-sm uppercase text-gray-600">Fabio Cani</h6>
+                      </div>
+                    </div>
+                    <div class="w-full">
+                      <p class="text-sm leading-tight"><span
+                          class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>Working with Deivid
+                        was an absolute game-changer for my personal copywriting portfolio. His
+                        keen understanding of my
+                        unique voice and style translated seamlessly into a compelling showcase of my work. Deivid's
+                        dedication to capturing the
+                        essence of my brand was evident in every word he crafted. The portfolio he created not only
+                        impressed potential clients
+                        but also landed me exciting projects. Deivid is not just a skilled copywriter; he's a strategic
+                        storyteller who knows
+                        how to elevate your brand through words. I'm grateful for his expertise and highly recommend him
+                        to anyone looking to
+                        stand out in the competitive world of copywriting.<span
+                          class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span></p>
+                    </div>
+                  </div>
+                  <div
+                    class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
+                    <div class="w-full flex mb-4 items-center">
+                      <div class="overflow-hidden rounded-full w-10 h-auto bg-gray-50 border border-gray-200">
+                        <img src="ErtaDJ.jpg" alt="" class="w-10 h-10 bg-center bg-cover rounded-full">
+                      </div>
+                      <div class="flex-grow pl-3">
+                        <h6 class="font-bold text-sm uppercase text-gray-600">Erta Agolli</h6>
+                      </div>
+                    </div>
+                    <div class="w-full">
+                      <p class="text-sm leading-tight"><span
+                          class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>Deivid's expertise
+                        in crafting the narrative for my DJ website has been nothing short of
+                        phenomenal. His ability to
+                        encapsulate the energy, vibe, and unique musical style into compelling content has truly set my
+                        site apart. Deivid
+                        seamlessly translated my vision into words that resonate with my audience, creating a magnetic
+                        online presence. His
+                        attention to detail and commitment to understanding the essence of my brand resulted in a
+                        website that not only looks
+                        stunning but also tells a captivating story. Working with Deivid was a game-changer for my
+                        brand, and I wholeheartedly
+                        recommend his services to anyone looking to make a lasting impression in the music
+                        industry.<span class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-3 md:w-1/3">
+                  <div
+                    class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
+                    <div class="w-full flex mb-4 items-center">
+                      <div class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200">
+                        <img src="Shota_Logo_Black_small.png" alt="">
+                      </div>
+                      <div class="flex-grow pl-3">
+                        <h6 class="font-bold text-sm uppercase text-gray-600">ShotaPaGota<h6>
+                      </div>
+                    </div>
+                    <div class="w-full">
+                      <p class="text-sm leading-tight"><span
+                          class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>Deivid's creative
+                        prowess took our Instagram page, ShtoaPaGota, to new heights. As the
+                        mastermind behind all graphical
+                        designs, Deivid breathed life into our visual identity. His innovative approach and keen eye for
+                        aesthetics transformed
+                        our page into a captivating visual journey. From engaging posts to eye-catching stories,
+                        Deivid's designs not only
+                        amplified our brand but also resonated with our audience. His commitment to excellence and
+                        ability to capture the
+                        essence of ShtoaPaGota's vibe made him an invaluable asset to our team. If you're seeking a
+                        graphic designer who
+                        seamlessly blends creativity with brand identity, Deivid is the ultimate choice.<span
+                          class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:hidden">
+          <div class="max-w-md mx-auto mb-14 text-center">
+            <h1 class="text-4xl font-semibold text-white mb-6 lg:text-5xl"><span class="text-purple-400">Flexible</span>
+              Plans
+            </h1>
+            <p class="text-xl text-white font-medium">Choose a plan that works best for you and your team.</p>
+            <p class="text-md text-white font-medium">*Pricing may differ based on requests*</p>
+          </div>
+
+          <div class="flex flex-col justify-between items-center lg:flex-row lg:items-start">
+            <div
+              class="w-full flex-1 mt-8 p-8 order-2 bg-white shadow-xl rounded-3xl sm:w-96 lg:w-full lg:order-1 lg:rounded-r-none">
+              <div class="mb-7 pb-7 flex items-center border-b border-gray-300">
+                <img src="https://res.cloudinary.com/williamsondesign/abstract-1.jpg" alt=""
+                  class="rounded-3xl w-20 h-20" />
+                <div class="ml-5">
+                  <span class="block text-2xl font-semibold">Static / Landing Page</span>
+                  <span><span class="font-medium text-gray-500 text-xl align-top">€&thinsp;</span><span
+                      class="text-3xl font-bold">500</span></span><span class="text-gray-500 font-medium"> Starting
+                    price</span>
+                </div>
+              </div>
+              <ul class="mb-7 font-medium text-gray-500">
+                <li class="flex text-lg mb-2">
+                  <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
+                  <span class="ml-3"><span class="text-[#2e2f30]">Responsive </span>Page Design</span>
+                </li>
+                <li class="flex text-lg mb-2">
+                  <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
+                  <span class="ml-3">Development & Deployment</span>
+                </li>
+              </ul>
+              <a href="#/"
+                class="flex justify-center items-center bg-sky-400 rounded-xl py-5 px-4 text-center text-white text-xl">
+                Choose Plan
+                <img src="https://res.cloudinary.com/williamsondesign/arrow-right.svg" class="ml-2" />
+              </a>
+            </div>
+
+            <div
+              class="w-full flex-1 p-8 order-1 shadow-xl rounded-3xl bg-gray-900 text-gray-400 sm:w-96 lg:w-full lg:order-2 lg:mt-0">
+              <div class="mb-8 pb-8 flex items-center border-b border-gray-600">
+                <img src="https://res.cloudinary.com/williamsondesign/abstract-2.jpg" alt=""
+                  class="rounded-3xl w-20 h-20" />
+                <div class="ml-5">
+                  <span class="block text-3xl font-semibold text-white">E-Commerce</span>
+                  <span><span class="font-medium text-xl align-top">€&thinsp;</span><span
+                      class="text-3xl font-bold text-white">5000
+                    </span></span><span class="font-medium">Staring Price</span>
+                </div>
+              </div>
+              <ul class="mb-10 font-medium text-xl">
+                <li class="flex text-lg mb-2">
+                  <img src="https://res.cloudinary.com/williamsondesign/check-white.svg" />
+                  <span class="ml-3"><span class="text-white">Responsive </span>Page Design</span>
+                </li>
+                <li class="flex text-lg mb-2">
+                  <img src="https://res.cloudinary.com/williamsondesign/check-white.svg" />
+                  <span class="ml-3"><span class="text-white">Online Purchase </span>Methods</span>
+                </li>
+                <li class="flex text-lg mb-2">
+                  <img src="https://res.cloudinary.com/williamsondesign/check-white.svg" />
+                  <span class="ml-3"><span class="text-white">Development & Deployment </span>
+                </li>
+                <li class="flex text-lg mb-2">
+                  <img src="https://res.cloudinary.com/williamsondesign/check-white.svg" />
+                  <span class="ml-3"><span class="text-white">1 month free </span>Maintainence</span>
+                </li>
+
+              </ul>
+              <a href="#/"
+                class="flex justify-center items-center bg-sky-400 rounded-xl py-6 px-4 text-center text-white text-2xl">
+                Choose Plan
+                <img src="https://res.cloudinary.com/williamsondesign/arrow-right.svg" class="ml-2" />
+              </a>
+            </div>
+
+            <div
+              class="w-full flex-1 mt-8 p-8 order-3 bg-white shadow-xl rounded-3xl sm:w-96 lg:w-full lg:order-3 lg:rounded-l-none">
+              <div class="mb-7 pb-7 flex items-center border-b border-gray-300">
+                <img src="https://res.cloudinary.com/williamsondesign/abstract-3.jpg" alt=""
+                  class="rounded-3xl w-20 h-20" />
+                <div class="ml-5">
+                  <span class="block text-2xl font-semibold">Web Application</span>
+                  <span><span class="font-medium text-gray-500 text-xl align-top">€&thinsp;</span><span
+                      class="text-3xl font-bold">3000</span></span><span class="text-gray-500 font-medium"> Starting
+                    Price</span>
+                </div>
+              </div>
+              <ul class="mb-7 font-medium text-gray-500">
+                <li class="flex text-lg mb-2">
+                  <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
+                  <span class="ml-3"><span class="text-[#2e2f30]">Responsive </span>Page Design</span>
+                </li>
+                <li class="flex text-lg mb-2">
+                  <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
+                  <span class="ml-3">Development & Deployment</span>
+                </li>
+                <li class="flex text-lg mb-2">
+                  <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
+                  <span class="ml-3"><span class="text-[#2e2f30]">Database Structure</span></span>
+                </li>
+              </ul>
+              <a href="#/"
+                class="flex justify-center items-center bg-sky-400 rounded-xl py-5 px-4 text-center text-white text-xl">
+                Choose Plan
+                <img src="https://res.cloudinary.com/williamsondesign/arrow-right.svg" class="ml-2" />
+              </a>
+            </div>
+          </div>
+          <p class="text-md text-white font-medium w-fit mx-auto mt-10">*If a request is not listed in the plans below
+            feel free to contact
+            via the
+            contact details*</p>
+        </div>
+    </section>
+    <div class="bg-[#0d0f11]">
+      <section class="w-screen h-screen flex justify-center bg-[#D1D1D1] rounded-3xl">
+        <div class="h-[75%] w-10/12 bg-[#f8f5f2] mt-24 rounded-[130px] relative lg:mb-10">
+          <div
+            class="flex justify-center h-full lg:w-[60%] m-auto flex-col items-center relative -mb-64 gap-2 text-center">
+            <span
+              class="font-bold tracking-wide text-[#2b2d40] xl:text-7xl sm:text-4xl md:text-5xl lg:text-6xl first-letter:italic z-20">Working
+              with
+              creativity</span>
+            <span
+              class="font-bold tracking-wide text-[#2b2d40] xl:text-7xl sm:text-4xl md:text-5xl lg:text-6xl z-20"><img
+                class="image-pill" src="assets/Images/pexels-dmitry-demidov-3920847.jpg" alt="cassete"> And
+              precision
+            </span>
+            <span
+              class="font-bold tracking-wide text-[#2b2d40]  xl:text-7xl lg:text-6xl md:text-5xl sm:text-4xl z-20">To
+              acheive
+              all <img class="image-pill" src="assets/Images/pexels-karolina-grabowska-5726030V2.jpg"
+                alt="headphones"></span>
+            <span
+              class="font-bold tracking-wide text-[#6e8d9a] md:text-5xl  xl:text-7xl lg:text-6xl sm:text-4xl z-20">of
+              your
+              demands</span>
+            <div class="absolute z-0 h-96 move-block-animation" id="movingBlocksContainer">
+              <div class="flex flex-row gap-1 w-full h-full">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <section class="bg-[#0d0f11]" id="contact">
+    <div class="max-w-lg bg-[#0d0f11] px-4 pt-24 py-8 mx-auto text-left md:max-w-none md:text-center">
+      <h1
+        class="font-extrabold leading-10 tracking-tight text-white text-center sm:leading-none md:text-6xl sm:text-4xl lg:text-7xl">
+        <span class="inline md:block">Create your</span>
+        <span
+          class="bg-clip-text text-transparent bg-gradient-to-r from-[#d1c1fc] via-[#d3cce6] to-[#e6e4eb] md:inline-block h-fit py-4">Next
+          Project</span>
+
+      </h1>
+      <div class="mx-auto rounded-lg font-black mt-5 text-zinc-400 md:mt-12 md:max-w-lg text-center lg:text-lg">
+        <a href="mailto:deivi.cifligu@gmail.com"
+          class="border text-sm text-white py-3 px-7 rounded-full hover:bg-white hover:transition-all hover:text-[#0d0f11] transition-all cursor-pointer">
+          Contact
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="text-white mx-5" />
+  <footer class="bg-[#0d0f11] pb-5">
+    <div class="max-w-screen-xl px-4 pt-8 mx-auto sm:px-6 lg:px-8">
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <div class="flex justify-center sm:justify-start">
+          <img class="rounded-full" src="assets/Images/Logo-white.svg" width="60" height="60" />
+        </div>
+
+        <p class="mt-4 text-sm text-center text-gray-400 lg:text-right lg:mt-0">
+          T&C &nbsp; Career &nbsp; Privacy & Policy &nbsp;
+        </p>
+      </div>
+    </div>
+  </footer>
+  </div>
+
+</body>
+
+</html>
